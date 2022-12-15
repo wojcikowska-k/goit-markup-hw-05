@@ -9,6 +9,7 @@
   --grey-transparent-color: rgba(100%, 100%, 100%, 60%);
   --shadow-color: #eeeeee;
   --dark-transparent-color: rgba(47, 48, 58, 0.4);
+  --dark-transparent-color2: rgba(47, 48, 58, 0.8);
   --light-transparent-color: rgba(255, 255, 255, 0.1);
   --grey-icon-color: #afb1b8;
 }
@@ -52,15 +53,17 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding-top: 24px;
+  padding-top: 25px;
   padding-bottom: 25px;
 }
 .nav {
   font-size: 14px;
+  font-weight: 500;
   line-height: 1.14;
   display: flex;
   margin: 0 auto;
   margin-left: 93px;
+  letter-spacing: calc(0.02 * 14px);
 }
 .nav .list {
   display: flex;
@@ -81,6 +84,42 @@ body {
 .nav .link:focus {
   color: var(--blue-color);
 }
+.nav .link::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: var(--blue-color);
+  border-radius: 2px;
+  margin: 29px auto;
+  position: absolute;
+  display: none;
+}
+.nav-agency::after {
+  width: 53px;
+}
+.nav-portfolio::after {
+  width: 57px;
+}
+.nav-contact::after {
+  width: 51px;
+}
+.nav .link:hover::after,
+.nav .link:focus::after {
+  display: block;
+}
+.nav .list .nav-agency-open {
+  color: var(--blue-color);
+}
+.nav .list .nav-agency-open::after {
+  display: block;
+}
+.nav .list .nav-portfolio-open {
+  color: var(--blue-color);
+}
+.nav .list .nav-portfolio-open::after {
+  display: block;
+}
+
 .list-item {
   color: var(--grey-color);
 }
@@ -207,7 +246,7 @@ body {
 .what-we-do-content {
   padding: 94px 0px;
 }
-.what-we-do-flex {
+.what-we-do-list {
   display: flex;
   justify-content: space-between;
   gap: 30px;
@@ -225,6 +264,24 @@ body {
 }
 .what-we-do-image {
   display: block;
+}
+.what-we-do-list-item {
+  position: relative;
+}
+.what-we-do-subtext {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  padding: 27px 90px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: var(--white-color);
+  font-size: 14px;
+  letter-spacing: calc(0.03 * 14px);
+  font-weight: 700;
+  text-align: center;
+  background: var(--dark-transparent-color2);
 }
 
 .team-content {
