@@ -70,7 +70,9 @@
               dla waszego biznesu
             </h1>
 
-            <button type="button" class="hero-button">Zamów usługe</button>
+            <button type="button" class="hero-button" data-modal-open>
+              Zamów usługe
+            </button>
           </div>
         </div>
       </section>
@@ -479,5 +481,12 @@
         </div>
       </div>
     </footer>
+    <!-- MODAL WINDOW -->
+    <div class="is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="js/modal.js"></script>
   </body>
 </html>
